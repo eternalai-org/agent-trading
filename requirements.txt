@@ -1,0 +1,13 @@
+# Python dependencies for ui-ux-pro-max-skill
+
+# HTTP requests library
+requests>=2.32.0
+
+# Flask web framework for API server
+flask>=3.0.0
+
+# Production WSGI server
+gunicorn>=22.0.0
+
+# Env loader
+python-dotenv>=1.0.1
