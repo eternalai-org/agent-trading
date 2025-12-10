@@ -65,22 +65,6 @@ bear_researcher → bull_researcher → neutral_researcher → research_manager 
 └──────────────────┘
 ```
 
-## 🤖 Agents
-
-| Agent | Role | Documentation |
-|-------|------|---------------|
-| **@market_analyst_btc** | Analyze BTC market with BTC-specific indicators | `.cursor/agents/market_analyst_btc.md` |
-| **market_analyst** | Analyze market for altcoins with technical indicators | `.cursor/agents/market_analyst.md` |
-| **news_analyst** | Analyze news and trends for trading implications | `.cursor/agents/news_analyst.md` |
-| **bear_researcher** | Build case for short positions | `.cursor/agents/bear_researcher.md` |
-| **bull_researcher** | Build case for long positions | `.cursor/agents/bull_researcher.md` |
-| **neutral_researcher** | Build case for holding/avoiding positions | `.cursor/agents/neutral_researcher.md` |
-| **research_manager** | Evaluate debate and create investment plan | `.cursor/agents/research_manager.md` |
-| **trader** | Make leveraged trading decision | `.cursor/agents/trader.md` |
-| **aggressive_debator** | Advocate for high-leverage strategies | `.cursor/agents/aggressive_debator.md` |
-| **conservative_debator** | Advocate for low-risk strategies | `.cursor/agents/conservative_debator.md` |
-| **risk_manager** | Final risk assessment and trade decision | `.cursor/agents/risk_manager.md` |
-
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -95,8 +79,8 @@ bear_researcher → bull_researcher → neutral_researcher → research_manager 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd cursor_trading_agents
+   git clone https://github.com/eternalai-org/agent-trading.git
+   cd agent-trading
    ```
 
 2. **Create and activate virtual environment**
@@ -145,92 +129,12 @@ Expected response:
 
 ### Using the Trading Command
 
-In Cursor IDE, use the `/trading` command to analyze any cryptocurrency:
+In Cursor/Claude IDE, use the `/trading` command to analyze any cryptocurrency:
 
 ```
 /trading Should I long or short BTC right now?
 ```
 
-### Example Workflow
-
-**User:** "Long or short BTC?"
-
-**Result Flow:**
-1. **@market_analyst_btc** → Analyzes BTC market → BTC Market Report
-2. **market_analyst** → Analyzes market (if altcoin) → Market Report
-3. **news_analyst** → Analyzes news and trends → News Report
-4. **bear_researcher** → Builds short case → Bear Arguments
-5. **bull_researcher** → Builds long case → Bull Arguments
-6. **neutral_researcher** → Builds hold case → Neutral Arguments
-7. **research_manager** → Evaluates debate → Investment Plan (LONG/SHORT/HOLD)
-8. **trader** → Makes trading decision → Trading Decision (Entry, Leverage, SL, TP)
-
-### API Endpoints
-
-#### Get Cryptocurrency Price
-```bash
-GET /api/price?symbol=BTC&convert=USDT
-```
-
-**Response:**
-```json
-{
-  "symbol": "BTC",
-  "price": 90449.17,
-  "convert": "USDT",
-  "trading_pair": "BTCUSDT"
-}
-```
-
-#### Get Futures Market Info
-```bash
-GET /api/futures/market-info?symbol=BTC
-```
-
-#### Get Technical Indicator
-```bash
-GET /api/ta/indicator?indicator=rsi&ticker=BTC&interval=4h&period=14
-```
-
-**Supported Indicators:**
-- `rsi` - Relative Strength Index
-- `macd` - Moving Average Convergence Divergence
-- `ema` - Exponential Moving Average
-- `sma` - Simple Moving Average
-- `bbands` - Bollinger Bands
-- `atr` - Average True Range
-- And more...
-
-#### Get News
-```bash
-GET /api/news/tweet
-GET /api/news/search-topic?query=ETHEREUM
-```
-
-## 📁 Project Structure
-
-```
-cursor_trading_agents/
-├── .cursor/
-│   ├── agents/              # Agent documentation
-│   │   ├── market_analyst_btc.md
-│   │   ├── market_analyst.md
-│   │   ├── news_analyst.md
-│   │   ├── bear_researcher.md
-│   │   ├── bull_researcher.md
-│   │   ├── neutral_researcher.md
-│   │   ├── research_manager.md
-│   │   ├── trader.md
-│   │   └── ...
-│   ├── commands/           # Cursor commands
-│   │   └── trading.md
-│   └── workflows/          # Workflow definitions
-│       └── trading.md
-├── server.py               # Flask API server
-├── requirements.txt        # Python dependencies
-├── .gitignore
-└── README.md
-```
 
 ## 🔧 Configuration
 
