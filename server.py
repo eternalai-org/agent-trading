@@ -5,7 +5,7 @@ Crypto Price API - Flask server for cryptocurrency price data (Binance Spot)
 Usage: python server.py [--port 5000]
 
 Endpoints:
-  GET /api/price?symbol=BTC&convert=USDT
+  GET http://127.0.0.1:5000/api/price?symbol=BTC&convert=USDT
 """
 
 import os
@@ -236,7 +236,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     print(f"🚀 Starting Crypto Price API (Binance Spot) on http://{args.host}:{args.port}")
-    print(f"📖 Endpoint: GET /api/price?symbol=BTC&convert=USDT")
+    print(f"📖 Endpoint: GET http://127.0.0.1:5000/api/price?symbol=BTC&convert=USDT")
     print(f"💚 Health: GET /health")
     
     app.run(host=args.host, port=args.port, debug=False)
