@@ -73,7 +73,6 @@ bear_researcher → bull_researcher → neutral_researcher → research_manager 
 - pip
 - API keys (optional, for advanced features):
   - TAAPI.io secret (for technical indicators)
-  - Data backend URL (for news aggregation)
 
 ### Installation
 
@@ -197,7 +196,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 - [Binance API Documentation](https://binance-docs.github.io/apidocs/)
 - [TAAPI.io Documentation](https://taapi.io/documentation/)
-- [Cursor IDE Documentation](https://cursor.sh/docs)
 
 ## 📧 Support
 
