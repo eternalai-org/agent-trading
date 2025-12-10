@@ -148,9 +148,7 @@ Expected response:
 In Cursor IDE, use the `/trading` command to analyze any cryptocurrency:
 
 ```
-/trading long hay short BTC
-/trading long hay short ETH
-/trading long hay short BNB
+/trading Should I long or short BTC right now?
 ```
 
 ### Example Workflow
